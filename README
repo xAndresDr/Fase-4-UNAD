@@ -1,0 +1,75 @@
+# Software FJ - Fase 4
+
+Sistema Software FJ
+
+Este proyecto consiste en un programa desarrollado en Python para gestionar clientes, servicios y reservas de la empresa ficticia Software FJ. Se realizó utilizando programación orientada a objetos.
+
+Requisitos
+
+Tener Python 3.9 o una versión superior.
+
+No es necesario instalar programas o paquetes adicionales.
+
+El sistema no utiliza bases de datos.
+
+¿Cómo ejecutar el programa?
+
+Para iniciar el sistema, abre una terminal en la carpeta del proyecto y escribe:
+
+python main.py
+
+Si utilizas Windows, también puedes ejecutar:
+
+py main.py
+
+Funciones del sistema
+
+El programa cuenta con un menú que permite realizar las siguientes operaciones:
+
+Registrar clientes.
+
+Registrar servicios de salas, equipos y asesorías.
+
+Crear reservas.
+
+Confirmar reservas.
+
+Cancelar reservas.
+
+Procesar reservas y calcular sus costos.
+
+Consultar los clientes registrados.
+
+Consultar los servicios disponibles.
+
+Consultar las reservas realizadas.
+
+Ejecutar pruebas automáticas del sistema.
+
+Salir del programa.
+
+Conceptos de programación utilizados
+
+Durante el desarrollo del proyecto se aplicaron los siguientes conceptos:
+
+Abstracción: mediante las clases Entidad y Servicio.
+
+Encapsulación: para proteger algunos datos del cliente.
+
+Herencia: para crear los diferentes tipos de servicios.
+
+Polimorfismo: para utilizar métodos adaptados a cada servicio.
+
+Manejo de errores: mediante excepciones personalizadas.
+
+Listas: para almacenar clientes, servicios y reservas.
+
+Registro de eventos: mediante el archivo software_fj.log.
+
+También se utilizaron diferentes estructuras de manejo de excepciones de Python.
+
+Información importante
+
+Los datos registrados se mantienen mientras el programa está abierto. Cuando se cierra, los clientes, servicios y reservas creados se pierden, ya que el sistema no utiliza una base de datos.
+
+El archivo software_fj.log permite guardar información sobre algunos eventos y errores que ocurren durante la ejecución.
