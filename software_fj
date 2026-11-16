@@ -1,0 +1,73 @@
+2026-11-16 16:40:29,803 | INFO | Cliente registrado: Andres Perez
+2026-11-16 16:40:29,808 | ERROR | Prueba de cliente inválido.
+Traceback (most recent call last):
+  File "C:\Users\fierr\AppData\Local\Temp\Rar$DIa1968.36255.rartemp\main.py", line 351, in ejecutar_pruebas
+    Cliente("C002", "Cliente Inválido", "correo_malo", "3001234567")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fierr\AppData\Local\Temp\Rar$DIa1968.36255.rartemp\main.py", line 77, in __init__
+    self.__correo = self.__validar_correo(correo)
+                    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\fierr\AppData\Local\Temp\Rar$DIa1968.36255.rartemp\main.py", line 84, in __validar_correo
+    raise DatoInvalidoError("El correo electrónico no es válido.")
+DatoInvalidoError: El correo electrónico no es válido.
+2026-11-16 16:40:29,846 | INFO | Cliente registrado: Laura Gomez
+2026-11-16 16:40:29,846 | INFO | Servicio registrado: Sala de reuniones
+2026-11-16 16:40:29,847 | INFO | Servicio registrado: Video beam
+2026-11-16 16:40:29,848 | INFO | Servicio registrado: Asesoría de software
+2026-11-16 16:40:29,848 | ERROR | Prueba de servicio con costo inválido.
+Traceback (most recent call last):
+  File "C:\Users\fierr\AppData\Local\Temp\Rar$DIa1968.36255.rartemp\main.py", line 390, in ejecutar_pruebas
+    servicio_malo = ReservaSala("S002", "Sala incorrecta", -5000)
+  File "C:\Users\fierr\AppData\Local\Temp\Rar$DIa1968.36255.rartemp\main.py", line 116, in __init__
+    raise DatoInvalidoError("El costo base debe ser un número mayor que cero.")
+DatoInvalidoError: El costo base debe ser un número mayor que cero.
+2026-11-16 16:40:29,851 | INFO | Reserva creada: R001
+2026-11-16 16:40:29,851 | INFO | Reserva R001 confirmada.
+2026-11-16 16:40:29,851 | INFO | Reserva R001 procesada. Total: $119000.00
+2026-11-16 16:40:29,851 | INFO | Finalizó el intento de procesamiento de reserva R001.
+2026-11-16 16:40:29,852 | ERROR | Prueba de duración inválida.
+Traceback (most recent call last):
+  File "C:\Users\fierr\AppData\Local\Temp\Rar$DIa1968.36255.rartemp\main.py", line 413, in ejecutar_pruebas
+    sistema.crear_reserva("R002", cliente1, sala, 20)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fierr\AppData\Local\Temp\Rar$DIa1968.36255.rartemp\main.py", line 324, in crear_reserva
+    reserva = Reserva(identificador, cliente, servicio, duracion)
+  File "C:\Users\fierr\AppData\Local\Temp\Rar$DIa1968.36255.rartemp\main.py", line 235, in __init__
+    servicio.validar_parametros(duracion)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\fierr\AppData\Local\Temp\Rar$DIa1968.36255.rartemp\main.py", line 174, in validar_parametros
+    raise DatoInvalidoError("La sala se puede reservar entre 1 y 12 horas.")
+DatoInvalidoError: La sala se puede reservar entre 1 y 12 horas.
+2026-11-16 16:40:29,855 | INFO | Reserva creada: R003
+2026-11-16 16:40:29,855 | ERROR | No se pudo confirmar la reserva R003.
+Traceback (most recent call last):
+  File "C:\Users\fierr\AppData\Local\Temp\Rar$DIa1968.36255.rartemp\main.py", line 247, in confirmar
+    self.servicio.validar_disponibilidad()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\fierr\AppData\Local\Temp\Rar$DIa1968.36255.rartemp\main.py", line 122, in validar_disponibilidad
+    raise ServicioNoDisponibleError(
+        f"El servicio '{self.nombre}' no está disponible."
+    )
+ServicioNoDisponibleError: El servicio 'Video beam' no está disponible.
+2026-11-16 16:40:29,858 | ERROR | Prueba de servicio no disponible.
+Traceback (most recent call last):
+  File "C:\Users\fierr\AppData\Local\Temp\Rar$DIa1968.36255.rartemp\main.py", line 247, in confirmar
+    self.servicio.validar_disponibilidad()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\fierr\AppData\Local\Temp\Rar$DIa1968.36255.rartemp\main.py", line 122, in validar_disponibilidad
+    raise ServicioNoDisponibleError(
+        f"El servicio '{self.nombre}' no está disponible."
+    )
+ServicioNoDisponibleError: El servicio 'Video beam' no está disponible.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\fierr\AppData\Local\Temp\Rar$DIa1968.36255.rartemp\main.py", line 422, in ejecutar_pruebas
+    reserva2.confirmar()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\fierr\AppData\Local\Temp\Rar$DIa1968.36255.rartemp\main.py", line 253, in confirmar
+    raise ReservaError("Error al confirmar la reserva.") from error
+ReservaError: Error al confirmar la reserva.
+2026-11-16 16:40:29,861 | INFO | Reserva creada: R004
+2026-11-16 16:40:29,862 | INFO | Reserva R004 cancelada.
